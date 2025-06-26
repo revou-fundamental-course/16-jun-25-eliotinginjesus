@@ -428,6 +428,7 @@ display: flex;
 .slideshow {
         height: 300px;
         width: 270px;
+}
 
 .home-container {
     display: flex;
@@ -445,16 +446,12 @@ display: flex;
 }
 
 .result-form {
-  flex: 1;
   background: #d95734;
   border-radius: 8px;
   padding: 24px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   width: 100%;
-  min-width: 800px;
   color: white;
   
 }
-
-
 }
