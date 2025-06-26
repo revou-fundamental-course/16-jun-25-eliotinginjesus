@@ -1,4 +1,9 @@
 //====auto slide====
+
+setInterval(() => {
+    plusDivs(1);
+  }, 1000); // kecepatan slide
+
 let slideIndex = 1;
 showDivs(slideIndex);
 
