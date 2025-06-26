@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Website -Elio</title>
+     <!--css externel-->
+    <link rel="stylesheet" href="css\style.css">
+    
+  <script>
+  setInterval(() => {
+    plusDivs(1);
+  }, 1000); // kecepatan slide
+</script>
+
+</head>
+<body>
+    <!-- header content -->
+    <header class="main-header"> 
+        <!-- logo website -->
+        <div class="main-logo"></div>
+        <!-- navbar content -->
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#myportfolio">My Portfolio</a>
+            <a href="#contactme">Contact Me</a>
+        </nav>
+    </header>
+    <!-- Main content -->
+    <main>
+        <!-- home section -->
+        <section id="home" class="home">
+            <div class="home-container">
+                        <div class="text-content">
+                              <h1><div id="greeting" class="greeting-text"></div> Welcome to My Katik</h1>
+                                <p>My name is Elioting B.I, and I am a Junior Frontend Developer
+                                      <hr/>
+                                    I build interactive and accessible websites. <br> This is a demo of Matemathic calculator <br> built with pure HTML, CSS, and JavaScript.
+                                </p>
+                                 <!-- Navigation  -->
+                                 <nav>
+                                         <a class="triangle" href="#trianglesection">Triangle Calculator</a>
+                                 </nav>
+                        </div>
+                        <div class="wrapsslidecontrol">
+                            <div class="slideshow">
+                                 <img class="img-slideshow" src="https://i.imghippo.com/files/UQn9816vE.png"style="display: block;">
+                                 <img class="img-slideshow" src="https://i.imghippo.com/files/kLSO1276lpg.png" style="display: none;">
+                                <img class="img-slideshow" src="https://i.imghippo.com/files/ZRsL4331fWY.png" style="display: none;">
+                            </div>
+                             <div class="controls">
+                              <button onclick="plusDivs(-1)">Prev</button>
+                             <button onclick="plusDivs(1)">Next</button>
+                             </div>
+                        </div>
+    
+        </section>
+        <!-- myportfolio -->
+        <section id="myportfolio"  class="myportfolio">
+            <h1>Triangle Area and Perimeter Calculator</h1>
+             <hr>
+        <div class="container">
+                <!-- Luas -->
+        <section class="luas-segitiga">
+            <header id=trianglesection >
+                <h2>Area of a Triangle</h2>
+            </header>
+
+            <!-- Konten Luas -->
+            <div class="formula-img img-luas"></div>
+
+            <!-- Form Luas -->
+            <form class="formluassegitiga">
+                <header>
+                    <h2>Area of a Triangle Form </h2>
+                </header>
+
+                <div>
+                    <label for="alas">Base:</label>
+                    <input type="number" id="alas" name="alas" placeholder="Enter Base">
+                </div>
+
+                <div>
+                    <label for="tinggi">Height:</label>
+                    <input type="number" id="tinggi" name="tinggi" placeholder="Enter Height">
+                </div>
+
+                 <div>
+                      <button type="button" onclick="hitungLuasSegitiga()">Hitung</button>
+                        <button type="button" onclick="resetLuas()">Reset</button>
+                </div>
+  <p id="hasil-luas"></p>
+            </form>
+        </section>
+
+        <!-- Keliling -->
+        <section class="keliling-segitiga">
+            <header>
+                <h2>Perimeter of a Triangle</h2>
+            </header>
+
+            <!-- Konten Luas -->
+            <div class="formula-img img-keliling"></div>
+
+            <!-- Form Luas -->
+            <form class="keliling-segitiga">
+                <header>
+                    <h2>Perimeter of a Triangle Form</h2>
+                </header>
+
+                <div>
+                    <label for="sisi-a">Side A:</label>
+                    <input type="number" id="sisi-a" name="sisi-a" placeholder=" Enter Side A">
+                </div>
+
+                <div>
+                    <label for="sisi-b">Side B:</label>
+                    <input type="number" id="sisi-b" name="sisi-b" placeholder="Enter Side  B">
+                </div>
+
+                <div>
+                    <label for="sisi-c">Side C:</label>
+                    <input type="number" id="sisi-c" name="sisi-c" placeholder="Enter Side  C">
+                </div>
+
+                <div>
+                    <button type="button" onclick="hitungKelilingSegitiga(1)">Hitung</button>
+                    <button type="button" onclick="resetKeliling()">Reset</button>
+                </div>
+                    <p id="hasil-keliling"></p>
+            </form>
+        </section>
+        </div>
+        </section>
+        <hr/>
+        <!-- Contact me -->
+        <section id="contactme"  class="contactme">
+            <h1>Send Me a Message</h1>
+           <div class="container">
+  <div class="content">
+    <form id="myForm" action="">
+      <div>
+        <label for="name-input">Name</label>
+        <input type="text" id="name-input" placeholder="Enter your name" required>
+      </div>
+      <div>
+        <label for="email-input">Email</label>
+        <input type="email" id="email-input" placeholder="Enter your email" required>
+      </div>
+      <div>
+        <label for="phone-input">Phone Number</label>
+        <input type="tel" id="phone-input" placeholder="Enter your phone number" required>
+      </div>
+      <div>
+        <label for="message-input">Message</label>
+        <textarea id="message-input" placeholder="Enter your message"></textarea required>
+      </div>
+      <button type="button" id="submit-btn">Submit</button>
+    </form>
+  </div>
+  <div id="result-form" class="result-form">Your message
+  </div>
+</div>
+
+
+        </section>
+    </main>
+    <!-- Footer content -->
+    <footer class="footer"> 2025 Elioting B.I all right reserved.</footer>
+
+  <div class="popup-overlay" id="popup">
+  <div class="popup-box">
+    <button class="close-btn" onclick="closePopup()">×</button>
+    <h2>Hallo, can I know your name?</h2>
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+    <br>
+    <button class="submitpop" onclick="submitName()">Submit</button>
+  </div>
+</div>
+<script src="JS\script.js"></script>
+</body>
+</html>
+
