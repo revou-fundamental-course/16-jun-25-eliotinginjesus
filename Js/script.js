@@ -1,6 +1,4 @@
-
 //====auto slide====
-
 let slideIndex = 1;
 showDivs(slideIndex);
 
